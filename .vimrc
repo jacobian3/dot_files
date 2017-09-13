@@ -14,13 +14,13 @@ Plugin 'VundleVim/Vundle.vim'
 
 " color scheme
 Bundle 'altercation/vim-colors-solarized'
-"Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " utility
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'Yggdroot/indentLine' "??? why isn't this working?
 
 " All of your Plugins must be added before the following line
@@ -73,7 +73,7 @@ set directory=~/.vim/.swp//
 "highlight ColorColumn ctermbg=magenta
 "call matchadd( 'ColorColumn','\%81v', 100 )
 
-" alternative #2: sets the 80 character limit notifier; everything after 80 is
+" alternative #2: sets the 80 character limit notifier; everything after 79 is
 " is colored!
 au BufWinEnter * let w:m2=matchadd ('ErrorMsg','\%>79v.\+', -1)
 
@@ -104,7 +104,7 @@ au BufNewFile,BufRead *.py
     \ set expandtab "  converts tabs into whitespace
     \ set autoindent
 	\ set encoding=utf-8 " EXPERIMENT
-"    \ set fileformat=utf-8 "unix 
+    \ set fileformat=utf-8 "unix 
 
 "other web standards
 au BufNewFile,BufRead *.js, *.html, *.css
@@ -128,10 +128,16 @@ nnoremap <C-H> <C-W><C-H>
 
 "Automatically change the current directory
 set autochdir
+
+"Automatically use the mac system clipboard for copy and paste
+set clipboard=unnamed " set clipboard=unnamedplus for linux system
+
+"switch between paste and nopaste modes while editing
+set pastetoggle=<F3>
+
+
 "----------------------powerline tweeks----------------------------------------
 " ???
 " let g:Powerline_symbols = 'fancy' " EXPERIMENT
 "set laststatus=2 "ensures that powerline status bar is always displayed
 "--------------------------------------------------------------
-
-

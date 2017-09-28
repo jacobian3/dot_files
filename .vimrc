@@ -103,14 +103,15 @@ au BufNewFile,BufRead *.py
     \ set textwidth=79
     \ set expandtab "  converts tabs into whitespace
     \ set autoindent
-	\ set encoding=utf-8 " EXPERIMENT
+    \ set encoding=utf-8 " EXPERIMENT
     \ set fileformat=utf-8 "unix 
 
 "other web standards
 au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
+    \ set tabstop=2 "how many coluumns = 1x tab(normal mode)
+    \ set softtabstop=2 "how many columns = 1x tab (insert mode)
     \ set shiftwidth=2
+    \ set expandtab "  converts tabs into whitespace
 
 " Enable code folding
 set foldmethod=indent 
@@ -138,6 +139,6 @@ set pastetoggle=<F3>
 
 "----------------------powerline tweeks----------------------------------------
 " ???
-" let g:Powerline_symbols = 'fancy' " EXPERIMENT
+"let g:Powerline_symbols = 'fancy' " EXPERIMENT
 "set laststatus=2 "ensures that powerline status bar is always displayed
 "--------------------------------------------------------------

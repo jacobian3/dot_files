@@ -106,12 +106,18 @@ au BufNewFile,BufRead *.py
     \ set encoding=utf-8 " EXPERIMENT
     \ set fileformat=utf-8 "unix 
 
-"other web standards
-au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2 "how many coluumns = 1x tab(normal mode)
-    \ set softtabstop=2 "how many columns = 1x tab (insert mode)
-    \ set shiftwidth=2
-    \ set expandtab "  converts tabs into whitespace
+"Experiment with other filetypes 
+filetype plugin indent on
+""other web standards
+"au BufNewFile,BufRead *.js, *.html, *.css
+"    \ set tabstop=2 "how many coluumns = 1x tab(normal mode)
+"    \ set softtabstop=2 "how many columns = 1x tab (insert mode)
+"    \ set shiftwidth=2
+"    \ set expandtab "  converts tabs into whitespace
+"    \ set autoindent
+"    \ set encoding=utf-8 " EXPERIMENT
+"    \ set fileformat=utf-8 "unix 
+
 
 " Enable code folding
 set foldmethod=indent 
